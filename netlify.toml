@@ -5,3 +5,17 @@
 [dev]
   command = "npm start"
   port = 4200
+
+# Configuración para manejar SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+# Manejo explícito de 404
+[[redirects]]
+  from = "/404"
+  to = "/index.html"
+  status = 200
+  force = true
